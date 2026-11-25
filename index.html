@@ -52,8 +52,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
     </button>
+
     <!-- 遮罩層 (點擊背景可關閉目錄) -->
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
     <!-- 側邊欄目錄 (按年級分課題) -->
     <div id="sidebar" class="fixed top-0 left-0 w-72 h-full bg-white shadow-2xl overflow-y-auto z-50">
         <div class="p-6 pt-16">
@@ -67,6 +69,7 @@
                     <li><button type="button" onclick="goHome()" class="w-full text-left block text-teal-700 hover:text-teal-500 hover:bg-teal-50 p-2 rounded transition-colors font-bold">返回主目錄</button></li>
                 </ul>
             </div>
+
             <!-- 三年級 -->
             <div class="mb-6">
                 <details class="group" open>
@@ -81,6 +84,7 @@
                     </ul>
                 </details>
             </div>
+
             <!-- 四年級 -->
             <div class="mb-6">
                 <details class="group" open>
@@ -109,7 +113,8 @@
                     <ul class="space-y-1 pl-3 border-l-2 border-orange-200 ml-2">
                         <li><a href="https://pmath-lab.github.io/fraction_as/" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">🍰 異分母分數加法及減法</a></li>
                         <li><a href="https://pmath-lab.github.io/fraction_a/" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">🏎️ 異分母分數加法及減法互動練習</a></li>
-                        <li><a href="https://pmath-lab.github.io/fractions_m/" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">✖️ 分數乘法</a></li>
+                        <li><a href="https://pmath-lab.github.io/fraction_m" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">✖️ 分數乘法</a></li>
+                        <li><a href="https://pmath-lab.github.io/fraction_m/game" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">🎮 分數乘法 互動練習</a></li>
                         <li><a href="https://pmath-lab.github.io/fraction_division/" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">🧚‍♂️ 分數除法互動練習</a></li>
                         <li><a href="https://pmath-lab.github.io/p5area/" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">📐 面積(二)</a></li>
                         <li><a href="https://pmath-lab.github.io/p5area/game" class="content-link block text-gray-700 hover:text-orange-500 hover:bg-orange-50 p-2 rounded transition-colors">⚔️ 面積(二) 互動練習</a></li>
@@ -134,101 +139,112 @@
             </div>
         </div>
     </div>
-<!-- 主頁面容器 (一行一行顯示，按年級分課題) -->
-<div id="home-container" class="h-full w-full overflow-y-auto p-6 md:p-12 pt-20">
-    <div class="max-w-3xl mx-auto"> 
-        
-        <!-- 標題 -->
-        <header class="text-center mb-10">
-            <h1 class="text-4xl md:text-5xl font-bold text-teal-600 mb-3">小學數學樂園</h1>
-            <p class="text-lg text-gray-600">請選擇年級與課題，進入自學或互動練習！</p>
-        </header>
-        <!-- 三年級區域 -->
-        <section class="mb-10">
-            <div class="flex items-center mb-4">
-                <span class="text-2xl mr-2">3️⃣</span>
-                <h2 class="text-2xl font-bold text-green-600 border-b-4 border-green-400 pb-1 inline-block">三年級</h2>
-            </div>
-            <div class="flex flex-col space-y-3">
-                <a href="https://pmath-lab.github.io/p3weight/" class="content-link flex items-center justify-between bg-white hover:bg-green-50 rounded-xl px-5 py-4 border-l-8 border-green-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚖️</span> 重量</span>
-                    <span class="text-green-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
-                </a>
-            </div>
-        </section>
-        <!-- 四年級區域 -->
-        <section class="mb-10">
-            <div class="flex items-center mb-4">
-                <span class="text-2xl mr-2">4️⃣</span>
-                <h2 class="text-2xl font-bold text-blue-600 border-b-4 border-blue-400 pb-1 inline-block">四年級</h2>
-            </div>
-            <div class="flex flex-col space-y-3">
-                <a href="https://pmath-lab.github.io/math/P4_Decimal_Plus_Minus.html" class="content-link flex items-center justify-between bg-white hover:bg-blue-50 rounded-xl px-5 py-4 border-l-8 border-blue-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">📝</span> 小數加法及減法</span>
-                    <span class="text-blue-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/math/P4G_Decimal_Plus_Minus.html" class="content-link flex items-center justify-between bg-white hover:bg-blue-50 rounded-xl px-5 py-4 border-l-8 border-blue-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚔️</span> 小數加法及減法互動練習</span>
-                    <span class="text-blue-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-            </div>
-        </section>
-        <!-- 五年級區域 -->
-        <section class="mb-10">
-            <div class="flex items-center mb-4">
-                <span class="text-2xl mr-2">5️⃣</span>
-                <h2 class="text-2xl font-bold text-orange-500 border-b-4 border-orange-400 pb-1 inline-block">五年級</h2>
-            </div>
-            <div class="flex flex-col space-y-3">
-                <a href="https://pmath-lab.github.io/fraction_as/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🍰</span> 異分母分數加法及減法</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/fraction_a/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏎️</span> 異分母分數加法及減法互動練習</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/fractions_m/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">✖️</span> 分數乘法</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/fraction_division/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🧚‍♂️</span> 分數除法互動練習</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/p5area/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">📐</span> 面積(二)</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/p5area/game" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚔️</span> 面積(二) 互動練習</span>
-                    <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-            </div>
-        </section>
-        <!-- 六年級區域 -->
-        <section class="mb-10">
-            <div class="flex items-center mb-4">
-                <span class="text-2xl mr-2">6️⃣</span>
-                <h2 class="text-2xl font-bold text-purple-600 border-b-4 border-purple-400 pb-1 inline-block">六年級</h2>
-            </div>
-            <div class="flex flex-col space-y-3">
-                <a href="https://pmath-lab.github.io/decimals_decimals/" class="content-link flex items-center justify-between bg-white hover:bg-purple-50 rounded-xl px-5 py-4 border-l-8 border-purple-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏴‍☠️</span> 小數除法合互動練習</span>
-                    <span class="text-purple-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-                <a href="https://pmath-lab.github.io/decimals4/" class="content-link flex items-center justify-between bg-white hover:bg-purple-50 rounded-xl px-5 py-4 border-l-8 border-purple-400 card-hover shadow-sm">
-                    <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏎️</span> 小數四則混合互動練習</span>
-                    <span class="text-purple-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
-                </a>
-            </div>
-        </section>
-        <!-- 頁尾 -->
-        <footer class="mt-12 text-center text-gray-400 text-sm">
-            <p>準備好迎接數學的挑戰了嗎？加油！</p>
-        </footer>
+
+    <!-- 主頁面容器 (一行一行顯示，按年級分課題) -->
+    <div id="home-container" class="h-full w-full overflow-y-auto p-6 md:p-12 pt-20">
+        <div class="max-w-3xl mx-auto"> 
+            
+            <!-- 標題 -->
+            <header class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-teal-600 mb-3">小學數學樂園</h1>
+                <p class="text-lg text-gray-600">請選擇年級與課題，進入自學或互動練習！</p>
+            </header>
+
+            <!-- 三年級區域 -->
+            <section class="mb-10">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">3️⃣</span>
+                    <h2 class="text-2xl font-bold text-green-600 border-b-4 border-green-400 pb-1 inline-block">三年級</h2>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="https://pmath-lab.github.io/p3weight/" class="content-link flex items-center justify-between bg-white hover:bg-green-50 rounded-xl px-5 py-4 border-l-8 border-green-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚖️</span> 重量</span>
+                        <span class="text-green-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 四年級區域 -->
+            <section class="mb-10">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">4️⃣</span>
+                    <h2 class="text-2xl font-bold text-blue-600 border-b-4 border-blue-400 pb-1 inline-block">四年級</h2>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="https://pmath-lab.github.io/math/P4_Decimal_Plus_Minus.html" class="content-link flex items-center justify-between bg-white hover:bg-blue-50 rounded-xl px-5 py-4 border-l-8 border-blue-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">📝</span> 小數加法及減法</span>
+                        <span class="text-blue-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/math/P4G_Decimal_Plus_Minus.html" class="content-link flex items-center justify-between bg-white hover:bg-blue-50 rounded-xl px-5 py-4 border-l-8 border-blue-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚔️</span> 小數加法及減法互動練習</span>
+                        <span class="text-blue-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 五年級區域 -->
+            <section class="mb-10">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">5️⃣</span>
+                    <h2 class="text-2xl font-bold text-orange-500 border-b-4 border-orange-400 pb-1 inline-block">五年級</h2>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="https://pmath-lab.github.io/fraction_as/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🍰</span> 異分母分數加法及減法</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/fraction_a/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏎️</span> 異分母分數加法及減法互動練習</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/fraction_m" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">✖️</span> 分數乘法</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/fraction_m/game" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🎮</span> 分數乘法 互動練習</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/fraction_division/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🧚‍♂️</span> 分數除法互動練習</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/p5area/" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">📐</span> 面積(二)</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">進入學習 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/p5area/game" class="content-link flex items-center justify-between bg-white hover:bg-orange-50 rounded-xl px-5 py-4 border-l-8 border-orange-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">⚔️</span> 面積(二) 互動練習</span>
+                        <span class="text-orange-500 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 六年級區域 -->
+            <section class="mb-10">
+                <div class="flex items-center mb-4">
+                    <span class="text-2xl mr-2">6️⃣</span>
+                    <h2 class="text-2xl font-bold text-purple-600 border-b-4 border-purple-400 pb-1 inline-block">六年級</h2>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="https://pmath-lab.github.io/decimals_decimals/" class="content-link flex items-center justify-between bg-white hover:bg-purple-50 rounded-xl px-5 py-4 border-l-8 border-purple-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏴‍☠️</span> 小數除法合互動練習</span>
+                        <span class="text-purple-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                    <a href="https://pmath-lab.github.io/decimals4/" class="content-link flex items-center justify-between bg-white hover:bg-purple-50 rounded-xl px-5 py-4 border-l-8 border-purple-400 card-hover shadow-sm">
+                        <span class="text-lg font-bold text-gray-800 flex items-center"><span class="text-2xl mr-3">🏎️</span> 小數四則混合互動練習</span>
+                        <span class="text-purple-600 font-bold text-sm md:text-base whitespace-nowrap ml-4">開始挑戰 ➔</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 頁尾 -->
+            <footer class="mt-12 text-center text-gray-400 text-sm">
+                <p>準備好迎接數學的挑戰了嗎？加油！</p>
+            </footer>
+        </div>
     </div>
-</div>
+
     <!-- 遊戲/自學網 iframe 容器 (預設隱藏，全視窗滿版顯示) -->
     <div id="game-container" class="hidden h-full w-full p-0 m-0">
         <div class="w-full h-full bg-white overflow-hidden relative">
@@ -256,6 +272,7 @@
         const gameContainer = document.getElementById('game-container');
         const gameFrame = document.getElementById('game-frame');
         const loadingSpinner = document.getElementById('loading-spinner');
+
         // 開關目錄的函數
         function toggleMenu() {
             sidebar.classList.toggle('open');
@@ -274,14 +291,17 @@
                     </svg>`;
             }
         }
+
         // 點擊按鈕時開關目錄
         menuBtn.addEventListener('click', toggleMenu);
+
         // 點擊遮罩層(背景)時關閉目錄
         overlay.addEventListener('click', () => {
             if (sidebar.classList.contains('open')) {
                 toggleMenu();
             }
         });
+
         // ================= 嵌入網頁控制 =================
         // 回到首頁函數
         function goHome() {
@@ -293,6 +313,7 @@
                 toggleMenu(); // 關閉目錄
             }
         }
+
         // 處理所有內容連結的點擊事件 (.content-link)
         document.querySelectorAll('.content-link').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -329,6 +350,7 @@
                 }
             });
         });
+
         // ================= 鎖定滑鼠右鍵 =================
         document.addEventListener('contextmenu', function(event) {
             event.preventDefault(); // 阻止預設的右鍵選單彈出
